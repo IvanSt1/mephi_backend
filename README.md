@@ -10,6 +10,8 @@ python manage.py runserver
 В лабе делалось с виртуальным окружением так что пусть будет с виртуальным
 
 ```
+sudo apt update
+sudo apt install postgresql postgresql-contrib
 sudo apt install python3.10-venv
 python -m venv .venv
 . .venv/bin/activate
