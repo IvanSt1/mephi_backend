@@ -18,10 +18,13 @@ python -m pip install django-debug-toolbar
 pip install psycopg2-binary
 python -m pip install faker
 pip install django-bootstrap5
+python manage.py makemigrations
+python manage.py migrate
 python3 manage.py createsuperuser
 python manage.py makemigrations
 python manage.py migrate
 ```
+(да надо сначла миграцию сделать она скажет ошибки потом суперпольщователя потом снова мигрировать я хз как сделать по другому)
 # Если траблы с постгрей при миграции то надо создать пользователя сделать его суперпользователем и создать бд:
 
 To create a new user:
