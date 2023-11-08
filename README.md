@@ -18,7 +18,9 @@ python -m pip install django-debug-toolbar
 pip install psycopg2-binary
 python -m pip install faker
 pip install django-bootstrap5
-python3 manage.py migrate
+python3 manage.py createsuperuser
+python manage.py makemigrations
+python manage.py migrate
 ```
 # Если траблы с постгрей при миграции то надо создать пользователя сделать его суперпользователем и создать бд:
 
@@ -39,6 +41,11 @@ Create DB
 ```
 psql -U mydatabaseuser
 CREATE DATABASE mydatabase;
+```
+
+Если вылетают ошибки при миграции или чтото не робит то скорее всего вы не создали админку чтобы пофиксить надо написать 
+```
+python3 manage.py createsuperuser
 ```
 Вроде все расписал если будут траблы можете конечно написать но не факт что я помню как они фиксились (еще вылетает ошибка в консоли по поводу favicon.ico на нее я забил хуй)
 
